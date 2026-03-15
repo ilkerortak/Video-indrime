@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+<meta charset="UTF-8">
+<title>Video İndirici</title>
+
+<style>
+body{
+background:#1e3a8a;
+font-family:Arial;
+text-align:center;
+color:white;
+margin-top:120px;
+}
+
+input{
+padding:10px;
+width:260px;
+border-radius:6px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+margin-top:15px;
+border:none;
+border-radius:6px;
+background:green;
+color:white;
+font-size:16px;
+}
+
+#sonuc{
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Video İndirici</h1>
+
+<p>Video linkini yapıştır</p>
+
+<input id="link" type="text" placeholder="Video linki">
+
+<br>
+
+<button onclick="indir()">İndir</button>
+
+<div id="sonuc"></div>
+
+<script>
+
+function indir(){
+
+var link = document.getElementById("link").value;
+
+if(link == ""){
+alert("Lütfen link gir");
+return;
+}
+
+var video = "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4";
+
+document.getElementById("sonuc").innerHTML =
+'<a style="color:white;font-size:18px;" href="'+video+'" download>Videoyu indir</a>';
+
+}
+
+</script>
+
+</body>
+</html>
